@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./my.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body id="editcenter">
+    <form class="idform" onsubmit="return validateForm()" method="post" action="./index.html"><!--index페이지로-->
+        <fieldset class="editfield">
+            <h1>게시물 수정</h1>
+                <!-- 이름 입력 필드 -->
+                <label for="name">이름</label>
+                <input type="text" id="name" name="name" value="박민준" required >
+                <br><br>
+        
+                <!-- 관계 입력 필드 -->
+                <label for="relationship">관계</label>
+                <input type="text" id="relationship" name="relationship" value="본인" required>
+                <br><br>
+        
+                <!-- 전화번호 입력 필드 -->
+                <label for="phone">전화번호</label>
+                <input type="tel" id="phone" name="phone" value="010-1234-5678" required>
+                <br><br>
+        
+                <!-- 이메일 입력 필드 -->
+                <label for="email">이메일</label>
+                <input type="email" id="email" name="email" value="22000257@handong.edu" required>
+                <br><br>
+        
+                <!-- 주소 입력 필드 -->
+                <label for="address">주소</label>
+                <input type="text" id="address" name="address" value="경북 포항시" required>
+                <br><br>
+        
+                <!-- 생일 입력 필드 -->
+                <label for="birthday">생일</label>
+                <input type="date" id="birthday" name="birthday" value="2001-07-21" required>
+                <br><br>
+                
+                <!-- 파일 업로드 필드 -->
+                <label for="image">파일 업로드</label>
+                <input type="file" name="image" id="image" accept="image/*"> 
+                <br><br>
+
+                <!-- 추가 버튼 -->
+                <input type="submit" value="추가" onclick="validateForm">
+            </fieldset>
+    </form>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var relationship = document.getElementById("relationship").value;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            var birthday = document.getElementById("birthday").value;
+        
+            // 이름과 관계 필드가 빈 값인지 확인
+            if (name.trim() === "" || relationship.trim() === "" || phone.trim() === "" || email.trim() === "" || birthday.trim() === "") {
+                alert("필수 항목을 채워주세요");
+                return false; // 폼 제출 방지
+            }else{
+                alert("게시물이 수정됩니다.");
+                return true;
+            }
+            var confirmEdit = confirm("게시물을 수정할까요?");
+            if (confirmEdit) {
+                // 확인 누른 경우
+                alert("게시물이 수정됩니다.");
+            } else {
+                // 취소 누른 경우
+                alert("취소되었습니다.");
+            }
+            return confirmEdit; // 폼 제출 여부 반환
+        }
+    </script>
+
+</body>
+</html>

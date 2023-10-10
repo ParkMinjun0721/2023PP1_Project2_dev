@@ -1,71 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initail-scale=1.0">
-    <title>Document</title>
-
-    <style>
-        #top {
-            background-color:#04AA6D; 
-            padding: 3px;
-            border: 2px solid green; 
-        }
-        #top h1, #top p {
-            color:aliceblue;
-        }
-        #center {
-            border: 2px solid gold; 
-            height: 500px;
-        }
-        #footer {
-            background-color: rgb(67, 189, 226); 
-            padding: 1px;
-            color: aliceblue;
-            border: 2px solid rgb(86, 167, 238); 
-        }
-        .link a {
-            color: darkgreen;
-        }
-        .main{
-            margin: 3px;
-            padding: 5px;
-        }
-        .link{
-            margin: 5px;
-            padding: 5px;
-        }
-    </style>
+  <title>Bootstrap Example</title>  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="./my.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
 </head>
-
 <body>
-    <div>
-        <div id="top">
-            <h1>Welcome to 22000257's  Homepage</h1>
-            <p>어서오세요! index.html 이에요 :></p>
-        </div>
-        <div id="center" >
-            <div class="main">
-                <p>귀여운 꾸링이 보고가세요 :></p>
-                <img src=".\imagefile\GGuRing2.png">
-                <img src=".\imagefile\GGuRing.png">
-                <img src=".\imagefile\GGuRing2.png">
-            </div>
-            <div class="link">
-                <p>링크 누르면 이동 가능해용</p>
-                <a href="./homepage/nostyle.html">Nostyle</a><br>
-                <a href="./homepage/style1.html">Stylesheet1</a><br>
-                <a href="./homepage/style2.html">Stylesheet2</a><br>
-                <a href="./form/form.html">form</a><br>
-                <a href="./example/example.html">example</a><br>
 
-                <p style="font-weight: bold;" >한번 누르면 이 페이지로는 못돌아와용 :></p>
-            </div>
-        </div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
     </div>
-</body>
-<div id="footer">
-    <p> 안녕히가세요 :><br> 오늘도 좋은 하루 되세요! </p>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="./index.html">Main</a></p>
+      <p><a href="#">Search</a></p>
+      <p><a href="#">Etc.</a></p>
+    </div>
+    <h1>지인 목록</h1>
+    <div class="adddiv">
+    <button class="Addbutton" onclick="location.href='./add.html'">Add</button>
+    </div>
+    <form action="" class="htmlform">
+      <input type="text" name="search" class="searchani"  placeholder="Search..">
+    </form>
+    <table>
+        <tr> <!-- tr = table row -->
+            <th>이름</th>
+            <th>관계</th>
+            <th>전화번호</th>
+            <th>이메일</th>
+            <th>주소</th>
+            <th>생일</th>
+            <th>Menu</th>
+        </tr>
+        <tr>
+            <td>홍길동</td>
+            <td>친구</td>
+            <td>010-1234-5678</td>
+            <td>hong@example.com</td>
+            <td>서울시 강남구</td>
+            <td>1990-01-15</td>
+            <td>
+                <button class="Edit" onclick="location.href='view.html'">View</button>
+                <!-- <button class="Delete" onclick="location.href='edit.html'">Edit</button> -->
+            </td>
+        </tr>
+        <tr>
+            <td>김영희</td>
+            <td>가족</td>
+            <td>010-9876-5432</td>
+            <td>kim@example.com</td>
+            <td>서울시 종로구</td>
+            <td>1985-08-22</td>
+            <td>
+                <button class="Edit" onclick="location.href='view.html'">View</button>
+                <!-- <button class="Delete" onclick="location.href='edit.html'">Edit</button> -->
+            </td>
+        </tr>
+        <tr>
+          <td>김영희</td>
+          <td>가족</td>
+          <td>010-9876-5432</td>
+          <td>kim@example.com</td>
+          <td>서울시 종로구</td>
+          <td>1985-08-22</td>
+          <td>
+              <button class="Edit" onclick="location.href='view.html'">View</button>
+              <!-- <button class="Delete" onclick="location.href='edit.html'">Edit</button> -->
+          </td>
+      </tr>
+      <tr>
+        <td>김영희</td>
+        <td>가족</td>
+        <td>010-9876-5432</td>
+        <td>kim@example.com</td>
+        <td>서울시 종로구</td>
+        <td>1985-08-22</td>
+        <td>
+            <button class="Edit" onclick="location.href='view.html'">View</button>
+            <!-- <button class="Delete" onclick="location.href='edit.html'">Edit</button> -->
+        </td>
+    </tr>
+    </table>    
+  </div>
 </div>
-</html>
 
+<footer class="container-fluid text-center">
+  <p>2023 PP1 22000257 박민준</p>
+</footer>
+
+</body>
+</html>
