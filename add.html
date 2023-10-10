@@ -12,32 +12,32 @@
             <h1>게시물 추가</h1>
                 <!-- 이름 입력 필드 -->
                 <label for="name">이름</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name">
                 <br><br>
         
                 <!-- 관계 입력 필드 -->
                 <label for="relationship">관계</label>
-                <input type="text" id="relationship" name="relationship" required>
+                <input type="text" id="relationship" name="relationship">
                 <br><br>
         
                 <!-- 전화번호 입력 필드 -->
                 <label for="phone">전화번호</label>
-                <input type="tel" id="phone" name="phone" required>
+                <input type="tel" id="phone" name="phone" >
                 <br><br>
         
                 <!-- 이메일 입력 필드 -->
                 <label for="email">이메일</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" >
                 <br><br>
         
                 <!-- 주소 입력 필드 -->
                 <label for="address">주소</label>
-                <input type="text" id="address" name="address" required>
+                <input type="text" id="address" name="address" >
                 <br><br>
         
                 <!-- 생일 입력 필드 -->
                 <label for="birthday">생일</label>
-                <input type="date" id="birthday" name="birthday" required>
+                <input type="date" id="birthday" name="birthday" >
                 <br><br>
                 
                 <!-- 파일 업로드 필드 -->
@@ -58,9 +58,9 @@
             var email = document.getElementById("email").value;
             var birthday = document.getElementById("birthday").value;
         
-            // 이름과 관계 필드가 빈 값인지 확인
+            // 사진을 제외한 필드가 빈 값인지 확인
             if (name.trim() === "" || relationship.trim() === "" || phone.trim() === "" || email.trim() === "" || birthday.trim() === "") {
-                alert("필수 항목을 채워주세요");
+                alert("사진을 제외한 모든 항목을 채워주세요");
                 return false; // 폼 제출 방지
             }else{
                 alert("게시물이 추가됩니다.");
