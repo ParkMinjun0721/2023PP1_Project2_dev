@@ -78,6 +78,7 @@ tr:hover {
     margin: 0;
     height: 100%;
     background-color:#f8f9fa;
+    flex-direction: column;
 }
 .idform, #editForm{
     text-align: center;
@@ -86,7 +87,11 @@ tr:hover {
     width: 100%;
     max-width: 330px;
     padding: 15px;
-    margin: auto;   
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    position: relative;
+    vertical-align: bottom;
 }
 html, body{
     margin: 0;
@@ -106,15 +111,33 @@ html, body{
     margin: 0;
     height: 100%;
     background-color:#f8f9fa;
+    position: relative;
+    flex-direction: column;
+    
 }
 .editfield{
     max-width: auto;
+    
 }
 .editfield label {
     display: block; 
     width: 200px; 
     text-align: center; 
     margin: 0 auto;
+}
+.buttons{
+    width: auto;
+    height: auto;
+    text-align: center;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: bottom;
+    margin-bottom: auto;
 }
 /*index.html*/
 .searchani {

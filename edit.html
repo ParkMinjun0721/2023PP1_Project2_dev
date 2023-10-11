@@ -46,10 +46,11 @@
                 <br><br>
 
                 <!-- 추가 버튼 -->
-                <input type="submit" value="수정" onclick="validateForm">
             </fieldset>
     </form>
-
+    <div class="buttons">
+    <button value="수정" onclick="validateForm()">수정</button> 
+    </div>
     <script>
         function validateForm() {
             var name = document.getElementById("name").value;
@@ -69,6 +70,7 @@
             if (confirmEdit) {
                 // 확인 누른 경우
                 alert("게시물이 수정됩니다.");
+                window.location.href='https://22000257final.netlify.app/view.html/'
             } else {
                 // 취소 누른 경우
                 alert("취소되었습니다.");
