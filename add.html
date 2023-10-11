@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body id="addcenter">
-    <form class="idform" onsubmit="return validateForm()" method="post" action="./index.html"><!--index페이지로-->
+    <form class="idform" onsubmit="return validateForm()" method="post" action=""><!--index페이지로-->
         <fieldset class="addfield">
             <h1>게시물 추가</h1>
                 <!-- 이름 입력 필드 -->
@@ -46,10 +46,10 @@
                 <br><br>
 
                 <!-- 추가 버튼 -->
-                <input type="submit" value="추가" onclick="validateForm">
+                
             </fieldset>
     </form>
-
+    <button value="추가" onclick="validateForm()">추가</button>
     <script>
         function validateForm() {
             var name = document.getElementById("name").value;
@@ -58,7 +58,7 @@
             var email = document.getElementById("email").value;
             var address = document.getElementById("address").value;
             var birthday = document.getElementById("birthday").value;
-        
+
             // 사진을 제외한 필드가 빈 값인지 확인
             if (name.trim() === "" || relationship.trim() === "" || phone.trim() === "" || email.trim() === "" || address.trim() === ""|| birthday.trim() === "") {
                 alert("사진을 제외한 모든 항목을 채워주세요");
@@ -69,6 +69,7 @@
             if (confirmadd) {
                 // 확인 누른 경우
                 alert("게시물이 추가됩니다.");
+                window.location.href='https://22000257final.netlify.app/'
             } else {
                 // 취소 누른 경우
                 alert("취소되었습니다.");
